@@ -13,7 +13,7 @@ public class UserActivityClient {
 		Properties prop = new Properties();
 		try {		
 			prop.load(UserActivityClient.class.getClassLoader().getResourceAsStream("application.properties"));
-			String uri=prop.getProperty("URL2");
+			String uri=prop.getProperty("URL");
 			URL url = new URL(uri);
 			ObjectMapper objectMapper = new ObjectMapper();
 			UserActivity[] userActivity = objectMapper.readValue(url, UserActivity[].class);
